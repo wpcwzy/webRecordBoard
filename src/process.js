@@ -1,8 +1,10 @@
-var supportsVibrate = "vibrate" in navigator;
-if(!supportsVibrate)
+function touchlisten()
 {
-    document.write()
+    var audio=document.getElementById("audio");
+    audio.currentTime=0;
+    audio.play();
 }
+
 function rotateAlarm()
 {
     if(window.orientation!=90)
@@ -14,7 +16,12 @@ function rotateAlarm()
         
     }
 }
+
 addEventListener('load', function(){
     rotateAlarm();
     window.onorientationchange =  rotateAlarm;
+});
+
+addEventListener("touchend",function(){
+    touchlisten();
 });
