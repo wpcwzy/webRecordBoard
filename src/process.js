@@ -3,6 +3,14 @@ function touchlisten()
     var audio=document.getElementById("audio");
     audio.currentTime=0;
     audio.play();
+    document.body.style.background="red";
+    setTimeout("reverse();",100);
+}
+
+function reverse()
+{
+    document.body.style.backgroundImage='url(img/background.png)';
+    document.body.style.backgroundSize="100%";
 }
 
 function rotateAlarm()
